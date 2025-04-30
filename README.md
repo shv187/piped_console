@@ -186,4 +186,4 @@ BOOL WINAPI DllMain(HINSTANCE module_handle, DWORD call_reason, LPVOID) {
 # Notes
 Console supports emitter's disconnection and connection of a new one.
 
-However one emitter won't connect to a new console if something (bad?) happens to the old one.
+However emitter won't connect to a new console if something (bad?) happens to the old one.
