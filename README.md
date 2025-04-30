@@ -26,7 +26,7 @@ But I did :)
 FetchContent_Declare(
     piped_console
     GIT_REPOSITORY https://github.com/shv187/piped_console.git
-    GIT_TAG 7307304cbd0cff8c4000f69070fb3d26cf908cab)
+    GIT_TAG v0.1.0)
 FetchContent_MakeAvailable(piped_console)
 ```
 - Link against it, eg.
