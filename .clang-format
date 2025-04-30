@@ -1,0 +1,34 @@
+BasedOnStyle: LLVM
+
+PointerAlignment: Left
+Cpp11BracedListStyle: 'false'
+ColumnLimit: 120
+
+AccessModifierOffset: -4
+IndentWidth: '4'
+
+NamespaceIndentation: All
+
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLoopsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+
+KeepEmptyLinesAtEOF: false
+
+AllowShortLambdasOnASingleLine: Empty
+
+# fix for <windows.h> include order breaking things
+SortIncludes: true
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^"[^/]*\.(h|hpp)\"'    # Local headers without directory
+    Priority: 1
+  - Regex: '^<[^/.]*>$'            # Standard headers without extension
+    Priority: 2
+  - Regex: '^<(windows.h|Windows.h)>' # Windows header
+    Priority: 3
+    SortPriority:    2
+  - Regex: '^<.*\.(h|hpp)>'        # Headers with .h/.hpp
+    Priority: 3
+  - Regex: '^".*'                  # Other project headers
+    Priority: 4
